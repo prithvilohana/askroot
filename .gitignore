@@ -1,0 +1,14 @@
+# Ignore OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore sensitive config
+config.php
+.env
+
+# Ignore vendor or logs
+vendor/
+node_modules/
+*.log
