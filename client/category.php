@@ -1,3 +1,5 @@
+<!-- Categories dropdown in ask page  -->
+
 <select name="category" id="category" class="form-input" required>
     <option value="">-- Choose a category --</option>
     <?php

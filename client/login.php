@@ -13,7 +13,8 @@
         <div class="text-center mt-4">
             <button type="submit" name="login" class="btn-primary">Login</button>
         </div>
-
+        <!-- Redirect field -->
+        <input type="hidden" name="redirect" value="<?php echo isset($_GET['redirect']) ? htmlspecialchars($_GET['redirect']) : ''; ?>">
         <p class="text-center mt-2">Don't have an account? <a href="?signup=true">Sign up now</a></p>
 
     </form>

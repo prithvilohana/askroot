@@ -1,3 +1,5 @@
+<!-- main question page -->
+
 <div class="container mt-4 mb-4 questions-main">
   <div class="row">
     <div class="col-8 col-md-8">
@@ -5,16 +7,16 @@
       <?php
       include('./common/db.php');
       if (isset($_GET['cat-id'])) {
-        $query = "SELECT * FROM questions WHERE category_id = '$cid'";
+        $query = "SELECT * FROM questions WHERE category_id = '$cid'";  // question based on categories
       } else if (isset($_GET['u-id'])) {
-        $query = "SELECT * FROM questions WHERE user_id = '$uid'";
+        $query = "SELECT * FROM questions WHERE user_id = '$uid'"; // question based on user
       } else if (isset($_GET['latest'])) {
-        $query = "SELECT * FROM questions ORDER BY id DESC";
+        $query = "SELECT * FROM questions ORDER BY id DESC"; // latest questions
       } else if (isset($_GET['q'])) {
-        $search = $conn->real_escape_string($search);
+        $search = $conn->real_escape_string($search); // search questions
         $query = "SELECT * FROM questions WHERE title LIKE '%$search%' OR discription LIKE '%$search%'";
       } else {
-        $query = "SELECT * FROM questions";
+        $query = "SELECT * FROM questions"; // all questions
       }
       $result = $conn->query($query);
       if ($result && $result->num_rows > 0) {
@@ -41,6 +43,8 @@
       }
       ?>
     </div>
+
+    <!-- category list -->
     <div class="col-4 mb-4">
       <div class="category-list-card">
         <?php

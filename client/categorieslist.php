@@ -1,3 +1,5 @@
+<!-- Categories List of all the categories in the database. -->
+
 <div class="container mt-4 mb-4 categories-list">
     <h2 class="text-center mb-4">Browse Categories</h2>
 
